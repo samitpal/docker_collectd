@@ -78,7 +78,7 @@ def read_callback():
   
   collectd.debug('Containers ' + ' '.join(CONTAINERS))
   conts = read(CONTAINERS)
-  if val is None:
+  if conts is None:
     return
   for k, v in conts.iteritems():
     dispatch_value(k, v)
